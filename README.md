@@ -3,7 +3,7 @@ how i rooted my motorola and installed linux in it.
 
 
 ### `Steps to root`
-* Note you will lose all data, so back up everything before doing any of the steps *
+- NOTE you will lose all data, so back up everything before doing any of the steps
 - unlock bootloader
   - link: https://forum.xda-developers.com/t/guide-motorola-one-power-unlock-relock-bootloader-flashing-custom-recovery-rooting.3858797/ 
   - `$ fastboot oem get_unlock_data`
