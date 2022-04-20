@@ -5,6 +5,8 @@ how i rooted my motorola and installed linux in it.
 ### `Steps to root`
 - unlock bootloader
   - link: https://forum.xda-developers.com/t/guide-motorola-one-power-unlock-relock-bootloader-flashing-custom-recovery-rooting.3858797/ 
+  - `$ fastboot oem get_unlock_data`
+  - `$ fastboot oem unlock EBK4NJO35ISPQTNGYWGO`
 - get stock boot.img file from devices
   - https://www.droidwin.com/extract-boot-img-directly-from-device-without-downloading-firmware/
   - ```
@@ -23,3 +25,6 @@ how i rooted my motorola and installed linux in it.
  - confirm in magisk app, everything is installed fine
  - confirm using root checker app root is enabled, (grant access in the pop up or in the magisk app)
 
+Mistakes:
+I did lot of mistakes, one option is boot to recovery and do factory reset data and then start over.
+Note TWRP imsage cannot be flashed in motorola one, instead we just boot temporarily in that.
