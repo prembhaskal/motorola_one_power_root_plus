@@ -1,2 +1,25 @@
 # motorola_one_power_root_plus
 how i rooted my motorola and installed linux in it.
+
+
+### `Steps to root`
+- unlock bootloader
+  - link: https://forum.xda-developers.com/t/guide-motorola-one-power-unlock-relock-bootloader-flashing-custom-recovery-rooting.3858797/ 
+- get stock boot.img file from devices
+  - https://www.droidwin.com/extract-boot-img-directly-from-device-without-downloading-firmware/
+  - ```
+     $ adb reboot recovery
+     $ adb shell
+     $ dd if=/dev/block/bootdevice/by-name/boot of=/sdcard/boot.img
+     $ adb pull /sdcard/boot.img stock_boot.img
+     
+   ```
+ - Once your device boots up, install the Magisk App and patch this boot.img file via it. Doing so shall give you the magisk_patched.img file, which you could then flash via Fastboot Commands and hence root your device!
+   - `$ adb pull /sdcard/Download/magisk_patched_[random_strings].img`
+ - Flash the magisk.zip file https://www.youtube.com/watch?v=xfdfZq-h20k
+ - Flash the magisk_patched file
+   - `$ fastboot flash boot /path/to/magisk_patched.img`
+ - reboot
+ - confirm in magisk app, everything is installed fine
+ - confirm using root checker app root is enabled, (grant access in the pop up or in the magisk app)
+
