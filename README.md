@@ -10,13 +10,13 @@ how i rooted my motorola and installed linux in it.
   - `$ fastboot oem unlock EBK4NJO35ISPQTNGYWGO`
 - get stock boot.img file from devices
   - https://www.droidwin.com/extract-boot-img-directly-from-device-without-downloading-firmware/
-  - ```
+  - below are commands from link
+   ```
      $ adb reboot recovery
      $ adb shell
      $ dd if=/dev/block/bootdevice/by-name/boot of=/sdcard/boot.img
+     $ exit
      $ adb pull /sdcard/boot.img stock_boot.img
-     
-   ```
  - Once your device boots up, install the Magisk App and patch this boot.img file via it. Doing so shall give you the magisk_patched.img file, which you could then flash via Fastboot Commands and hence root your device!  https://topjohnwu.github.io/Magisk/install.html#patching-images 
    - `$ adb pull /sdcard/Download/magisk_patched_[random_strings].img`
  - Flash the magisk.zip file https://www.youtube.com/watch?v=xfdfZq-h20k
